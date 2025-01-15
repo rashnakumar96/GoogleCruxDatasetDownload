@@ -32,9 +32,9 @@ Download and install the [Google Cloud CLI](https://cloud.google.com/sdk/docs/in
 
 ### Install Required Python Libraries
 Open a terminal and install the `google-cloud-bigquery` library:
-'''bash
+```bash
 pip install google-cloud-bigquery
-'''
+```
 
 ---
 
@@ -42,13 +42,16 @@ pip install google-cloud-bigquery
 
 ### Authenticate
 Open a terminal and authenticate with your Google account:
+```bash
 gcloud auth application-default login
-This will open a browser for you to log in.
-After logging in, the credentials will be saved locally.
+```
+This will open a browser for you to log in. After logging in, the credentials will be saved locally.
 
 ### Set the Active Project
 Set your active Google Cloud project:
+```bash
 gcloud config set project <YOUR_PROJECT_ID>
+```
 Replace <YOUR_PROJECT_ID> with your actual project ID (e.g., measurements-220513).
 For more details on authentication, refer to the [Google Cloud Authentication Setup Guide](https://cloud.google.com/docs/authentication/set-up-adc-local-dev-environment).
 
@@ -60,5 +63,8 @@ Ensure you can see the chrome-ux-report dataset: [chrome-ux-report Dataset](http
 ---
 
 ## 6. Run the Script
-Save and run the Python script python list_country_datasets.py
+Save and run the Python script:
+```bash
+python list_country_datasets.py
+```
 
