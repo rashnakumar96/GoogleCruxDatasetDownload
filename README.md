@@ -32,7 +32,9 @@ Download and install the [Google Cloud CLI](https://cloud.google.com/sdk/docs/in
 
 ### Install Required Python Libraries
 Open a terminal and install the `google-cloud-bigquery` library:
+'''bash
 pip install google-cloud-bigquery
+'''
 
 ---
 
