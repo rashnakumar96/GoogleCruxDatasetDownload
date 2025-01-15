@@ -8,7 +8,7 @@ def initialize_bigquery_client():
     return bigquery.Client(project="measurements-220513")
 
 def fetch_top_sites(client, country_code, date):
-    # Query to fetch sites with rank < 1000 for the given country
+    # Query to fetch sites with rank <= 1000 for the given country and date
     query = f"""
     SELECT DISTINCT  
         origin,
@@ -35,7 +35,7 @@ def save_to_json(results, country_code, filename="top_sites_per_country.json"):
     else:
         data = {}
 
-    # Extract origins and add them to a list
+    # Extract origins(sites) and add them to a list
     origins = [row[0] for row in results]
     data[cc_upper] = origins
     
@@ -43,7 +43,8 @@ def save_to_json(results, country_code, filename="top_sites_per_country.json"):
         json.dump(data, f, indent=4)
 
 def list_country_datasets(client):
-    datasets = client.list_datasets("chrome-ux-report")  # Specify the project and dataset
+    # To get all countries that crux has data for
+    datasets = client.list_datasets("chrome-ux-report") 
     
     # Extract and filter for datasets starting with 'country_'
     country_datasets = [
@@ -54,11 +55,8 @@ def list_country_datasets(client):
     return country_datasets
 
 
-# Main Function
 def main():
     try:
-        
-
         client = initialize_bigquery_client()
         print("Fetching data...")
 
