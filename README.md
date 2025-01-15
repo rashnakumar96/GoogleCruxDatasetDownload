@@ -65,6 +65,6 @@ Ensure you can see the chrome-ux-report dataset: [chrome-ux-report Dataset](http
 ## 6. Run the Script
 Save and run the Python script:
 ```bash
-python list_country_datasets.py
+python cruxTopsitesDownload.py
 ```
 
