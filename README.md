@@ -19,7 +19,6 @@ This guide will help you set up your environment to run a Python script that int
 1. Open the [API Library](https://console.cloud.google.com/apis/library).
 2. Search for and enable the following APIs:
    - **BigQuery API**
-   - **BigQuery Storage API**
 
 ---
 
